@@ -1,27 +1,27 @@
 function createTable () {
     let row = document.getElementById("row");
     let column = document.getElementById("column");
+    let container = document.getElementById("Container");
 
-    if (row.value =='' || column.value == '') {
-        alert("Xin nhập giá trị");
+    if (row.value == '' || column.value == '') {
+        alert("Xin nhập vào giá trị");
         return false;
-    } else if (isString(row.value) || isString(column.value)) {
-        alert("Xin nhập số nguyên dương");
+    } else if (isNaN(row.value) || isNaN(column.value)) {
+        alert("Xin nhập vào số nguyên dương");
         return false;
     } else {
-        let container = document.getElementById('Container');
         let countRow = parseInt(row.value);
         let countColumn = parseInt(column.value);
         let addTable = document.createElement("table");
-        addTable.border = '1';
+        addTable.border = 1;
 
-        for (i = 0; i < countRow; i++) {
+        for (let i = 0; i < countRow; i++) {
             let addRow = document.createElement("tr");
             addTable.appendChild(addRow);
 
-            for (j = 0; j < countColumn; j++) {
+            for (let j = 0; j < countColumn; j++) {
                 let addColumn = document.createElement("td");
-                let textNode = document.createTextNode(text);
+                let textNode = document.createTextNode(i + j);
                 addColumn.appendChild(textNode);
                 addRow.appendChild(addColumn);
             }

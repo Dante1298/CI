@@ -8,12 +8,13 @@
 </head>
 <body>
     <div id="Container">
-        <form id="form"  style= "width: 100px;">
-            Số dòng<input id ="row" type="text" placeholder="Nhập số dòng">
+        <h1 style="font-size: 1.2rem;">FORM TẠO BẢNG </h1>
+        <form id="form">
+            <input id ="row" type="text" placeholder="Nhập số dòng">
             <br>
-            Số cột<input id="column" type="text" placeholder="Nhập số cột">
+            <input style="margin-top: 2px;" id="column" type="text" placeholder="Nhập số cột">
             <br>
-            <input type="submit" onclick="addTable()" value="Tạo bảng">
+            <input style="margin-top: 2px; " type="button" onclick="createTable()" value="Tạo bảng">
         </form>
     </div>
     <script src="js/main.js"></script>
